@@ -54,10 +54,10 @@ expertiseTabs.forEach(tab => tab.addEventListener('click', () => {
 const quizzes = {
   mathematics: {
     label: 'QUICK PRACTICE · MATHEMATICS',
-    question: 'If f(x) = 2x + 3, what is f(4)?',
-    choices: ['8', '10', '11', '14'],
+    question: 'Besides the four group axioms, which additional property makes a group Abelian?',
+    choices: ['Closure', 'Associativity', 'Commutativity', 'Identity element'],
     answer: 2,
-    feedback: 'Put x = 4: 2(4) + 3 = 8 + 3 = 11.'
+    feedback: 'Every group already has closure, associativity, identity, and inverses. An Abelian group additionally satisfies a · b = b · a.'
   },
   coding: {
     label: 'QUICK PRACTICE · CODING',
