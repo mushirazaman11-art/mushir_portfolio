@@ -50,37 +50,56 @@ expertiseTabs.forEach(tab => tab.addEventListener('click', () => {
   });
 }));
 
-// Small interactive examples for the two primary study areas.
-const examples = {
+// Short practice questions for the primary academic areas.
+const quizzes = {
   mathematics: {
-    title: 'Quick reasoning example',
-    text: 'If a proof uses a theorem, first check its assumptions, then verify each step follows from the previous one. A correct conclusion depends on both.'
+    label: 'QUICK PRACTICE · MATHEMATICS',
+    question: 'For a contraction mapping, which condition is required for the constant λ?',
+    choices: ['λ > 1', '0 ≤ λ < 1', 'λ = 2', 'λ can be any negative number'],
+    answer: 1,
+    feedback: 'A contraction uses a constant between 0 and 1, which helps repeated iterations move toward a fixed point.'
   },
   coding: {
-    title: 'Quick code-review example',
-    text: 'For a loop, check three things: where it starts, when it stops, and how the value changes. This makes off-by-one errors easier to spot.'
+    label: 'QUICK PRACTICE · CODING',
+    question: 'What is the value of sum after: for (int i = 1; i <= 3; i++) sum += i; starting with sum = 0?',
+    choices: ['3', '5', '6', '9'],
+    answer: 2,
+    feedback: 'The loop adds 1 + 2 + 3, so the final value is 6.'
+  },
+  'computer-science': {
+    label: 'QUICK PRACTICE · COMPUTER SCIENCE',
+    question: 'Which data structure follows the FIFO principle?',
+    choices: ['Stack', 'Queue', 'Tree', 'Graph'],
+    answer: 1,
+    feedback: 'FIFO means First In, First Out—this is the defining principle of a queue.'
   }
 };
-Object.entries(examples).forEach(([topic, example]) => {
+Object.entries(quizzes).forEach(([topic, quizData]) => {
   const panel = document.getElementById(`topic-${topic}`);
   const reference = panel?.querySelector('small');
   if (!panel || !reference) return;
-  const button = document.createElement('button');
-  button.className = 'example-toggle';
-  button.type = 'button';
-  button.setAttribute('aria-expanded', 'false');
-  button.textContent = 'View a short example';
-  const box = document.createElement('div');
-  box.className = 'example-box';
-  box.hidden = true;
-  box.innerHTML = `<b>${example.title}</b><p>${example.text}</p>`;
-  button.addEventListener('click', () => {
-    const open = box.hidden;
-    box.hidden = !open;
-    button.setAttribute('aria-expanded', String(open));
-    button.textContent = open ? 'Hide example' : 'View a short example';
+  const quiz = document.createElement('section');
+  quiz.className = 'practice-quiz';
+  quiz.setAttribute('aria-label', `${topic} practice question`);
+  quiz.innerHTML = `<span>${quizData.label}</span><h4>${quizData.question}</h4><div class="quiz-options"></div><p class="quiz-result" aria-live="polite"></p>`;
+  const options = quiz.querySelector('.quiz-options');
+  const result = quiz.querySelector('.quiz-result');
+  quizData.choices.forEach((choice, index) => {
+    const option = document.createElement('button');
+    option.type = 'button';
+    option.className = 'quiz-option';
+    option.textContent = choice;
+    option.addEventListener('click', () => {
+      const correct = index === quizData.answer;
+      quiz.querySelectorAll('.quiz-option').forEach(item => item.classList.remove('wrong', 'correct'));
+      option.classList.add(correct ? 'correct' : 'wrong');
+      result.className = `quiz-result ${correct ? 'is-correct' : 'is-wrong'}`;
+      result.textContent = correct ? `Correct ✓ ${quizData.feedback}` : 'Try again — that option is not correct.';
+      if (correct) quiz.querySelectorAll('.quiz-option').forEach(item => { item.disabled = true; });
+    });
+    options.append(option);
   });
-  reference.after(button, box);
+  reference.after(quiz);
 });
 
 // Project overview dialog.
