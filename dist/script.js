@@ -155,13 +155,11 @@ if (contactLink) {
   copyButton.className = 'copy-email';
   copyButton.type = 'button';
   copyButton.textContent = 'Copy email address';
-  const whatsappLink = document.createElement('a');
-  whatsappLink.className = 'whatsapp-contact';
-  whatsappLink.href = 'https://wa.me/919142133912?text=Hello%20Mushir%2C%20I%20visited%20your%20portfolio.';
-  whatsappLink.target = '_blank';
-  whatsappLink.rel = 'noreferrer';
-  whatsappLink.textContent = 'Message on WhatsApp ↗';
-  contactLink.after(copyButton, whatsappLink);
+  const whatsappButton = document.createElement('button');
+  whatsappButton.className = 'whatsapp-contact';
+  whatsappButton.type = 'button';
+  whatsappButton.textContent = 'Message on WhatsApp ↗';
+  contactLink.after(copyButton, whatsappButton);
   copyButton.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText('mushirazaman11@gmail.com');
@@ -172,6 +170,16 @@ if (contactLink) {
     setTimeout(() => { copyButton.textContent = 'Copy email address'; }, 2400);
   });
 }
+
+// Keep the WhatsApp number out of visible text and browser link previews.
+document.querySelectorAll('.whatsapp-contact').forEach(button => {
+  button.addEventListener('click', () => {
+    const countryCode = '91';
+    const contactNumber = ['9142', '1339', '12'].join('');
+    const message = 'Hello Mushir, I visited your portfolio.';
+    window.open(`https://wa.me/${countryCode}${contactNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+  });
+});
 
 // A subtle reading-progress indicator and current page update label.
 const progress = document.createElement('div');
