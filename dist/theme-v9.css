@@ -1,3 +1,3 @@
 /* Clean front card: no media panel or decorative background. */
-.hero-visual{background:none}.academic-card{box-shadow:10px 10px 0 #243875}.academic-card dl{margin-bottom:0}.hero-role{font-size:clamp(12px,1.35vw,15px);line-height:1.45;letter-spacing:.045em;text-transform:none}.hero-intro{max-width:620px}
+.hero-visual{background:none}.academic-card{box-shadow:10px 10px 0 #243875}.academic-card dl{margin-bottom:0}.hero h1{font-size:clamp(44px,5vw,70px)}.hero-role{font-size:clamp(12px,1.35vw,15px);line-height:1.45;letter-spacing:.045em;text-transform:none}.hero-intro{max-width:650px}
 @media(max-width:700px){.academic-card{box-shadow:7px 7px 0 #243875}.hero-role{font-size:12px}}
