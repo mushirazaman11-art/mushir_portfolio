@@ -33,3 +33,19 @@ if (indiaTime) {
   updateIndiaTime();
   setInterval(updateIndiaTime, 60000);
 }
+
+const expertiseTabs = document.querySelectorAll('.expertise-tab');
+const expertisePanels = document.querySelectorAll('.topic-panel');
+expertiseTabs.forEach(tab => tab.addEventListener('click', () => {
+  const topic = tab.dataset.topic;
+  expertiseTabs.forEach(item => {
+    const active = item === tab;
+    item.classList.toggle('active', active);
+    item.setAttribute('aria-selected', String(active));
+  });
+  expertisePanels.forEach(panel => {
+    const active = panel.id === `topic-${topic}`;
+    panel.hidden = !active;
+    panel.classList.toggle('active', active);
+  });
+}));
