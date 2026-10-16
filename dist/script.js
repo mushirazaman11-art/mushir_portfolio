@@ -22,3 +22,14 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const indiaTime = document.getElementById('india-time');
+if (indiaTime) {
+  const updateIndiaTime = () => {
+    indiaTime.textContent = new Intl.DateTimeFormat('en-IN', {
+      timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false
+    }).format(new Date()) + ' · New Delhi (IST, UTC+5:30)';
+  };
+  updateIndiaTime();
+  setInterval(updateIndiaTime, 60000);
+}
