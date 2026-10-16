@@ -54,17 +54,17 @@ expertiseTabs.forEach(tab => tab.addEventListener('click', () => {
 const quizzes = {
   mathematics: {
     label: 'QUICK PRACTICE · MATHEMATICS',
-    question: 'What is 2 + 3?',
-    choices: ['4', '5', '6', '7'],
-    answer: 1,
-    feedback: '2 + 3 = 5. A small calculation is always a good way to start practising mathematical accuracy.'
+    question: 'If f(x) = 2x + 3, what is f(4)?',
+    choices: ['8', '10', '11', '14'],
+    answer: 2,
+    feedback: 'Put x = 4: 2(4) + 3 = 8 + 3 = 11.'
   },
   coding: {
     label: 'QUICK PRACTICE · CODING',
-    question: 'What is x after: int x = 2; x = x + 3; ?',
-    choices: ['2', '3', '5', '6'],
+    question: 'What is the final value of sum? int sum = 0; for (int i = 1; i <= 4; i++) sum += i;',
+    choices: ['4', '6', '10', '16'],
     answer: 2,
-    feedback: 'x starts at 2, then 3 is added, so the final value is 5.'
+    feedback: 'The loop adds 1 + 2 + 3 + 4, so sum becomes 10.'
   },
   'computer-science': {
     label: 'QUICK PRACTICE · COMPUTER SCIENCE',
