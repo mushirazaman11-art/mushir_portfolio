@@ -155,7 +155,13 @@ if (contactLink) {
   copyButton.className = 'copy-email';
   copyButton.type = 'button';
   copyButton.textContent = 'Copy email address';
-  contactLink.after(copyButton);
+  const whatsappLink = document.createElement('a');
+  whatsappLink.className = 'whatsapp-contact';
+  whatsappLink.href = 'https://wa.me/919142133912?text=Hello%20Mushir%2C%20I%20visited%20your%20portfolio.';
+  whatsappLink.target = '_blank';
+  whatsappLink.rel = 'noreferrer';
+  whatsappLink.textContent = 'Message on WhatsApp ↗';
+  contactLink.after(copyButton, whatsappLink);
   copyButton.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText('mushirazaman11@gmail.com');
