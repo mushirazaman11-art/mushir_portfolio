@@ -54,17 +54,17 @@ expertiseTabs.forEach(tab => tab.addEventListener('click', () => {
 const quizzes = {
   mathematics: {
     label: 'QUICK PRACTICE · MATHEMATICS',
-    question: 'For a contraction mapping, which condition is required for the constant λ?',
-    choices: ['λ > 1', '0 ≤ λ < 1', 'λ = 2', 'λ can be any negative number'],
+    question: 'What is 2 + 3?',
+    choices: ['4', '5', '6', '7'],
     answer: 1,
-    feedback: 'A contraction uses a constant between 0 and 1, which helps repeated iterations move toward a fixed point.'
+    feedback: '2 + 3 = 5. A small calculation is always a good way to start practising mathematical accuracy.'
   },
   coding: {
     label: 'QUICK PRACTICE · CODING',
-    question: 'What is the value of sum after: for (int i = 1; i <= 3; i++) sum += i; starting with sum = 0?',
-    choices: ['3', '5', '6', '9'],
+    question: 'What is x after: int x = 2; x = x + 3; ?',
+    choices: ['2', '3', '5', '6'],
     answer: 2,
-    feedback: 'The loop adds 1 + 2 + 3, so the final value is 6.'
+    feedback: 'x starts at 2, then 3 is added, so the final value is 5.'
   },
   'computer-science': {
     label: 'QUICK PRACTICE · COMPUTER SCIENCE',
@@ -84,6 +84,11 @@ Object.entries(quizzes).forEach(([topic, quizData]) => {
   quiz.innerHTML = `<span>${quizData.label}</span><h4>${quizData.question}</h4><div class="quiz-options"></div><p class="quiz-result" aria-live="polite"></p>`;
   const options = quiz.querySelector('.quiz-options');
   const result = quiz.querySelector('.quiz-result');
+  const reset = document.createElement('button');
+  reset.className = 'quiz-reset';
+  reset.type = 'button';
+  reset.textContent = 'Try again';
+  reset.hidden = true;
   quizData.choices.forEach((choice, index) => {
     const option = document.createElement('button');
     option.type = 'button';
@@ -95,10 +100,23 @@ Object.entries(quizzes).forEach(([topic, quizData]) => {
       option.classList.add(correct ? 'correct' : 'wrong');
       result.className = `quiz-result ${correct ? 'is-correct' : 'is-wrong'}`;
       result.textContent = correct ? `Correct ✓ ${quizData.feedback}` : 'Try again — that option is not correct.';
-      if (correct) quiz.querySelectorAll('.quiz-option').forEach(item => { item.disabled = true; });
+      if (correct) {
+        quiz.querySelectorAll('.quiz-option').forEach(item => { item.disabled = true; });
+        reset.hidden = false;
+      }
     });
     options.append(option);
   });
+  reset.addEventListener('click', () => {
+    quiz.querySelectorAll('.quiz-option').forEach(item => {
+      item.disabled = false;
+      item.classList.remove('wrong', 'correct');
+    });
+    result.className = 'quiz-result';
+    result.textContent = '';
+    reset.hidden = true;
+  });
+  quiz.append(reset);
   reference.after(quiz);
 });
 
@@ -109,7 +127,16 @@ if (researchCopy) {
   projectButton.className = 'project-detail-button';
   projectButton.type = 'button';
   projectButton.textContent = 'Read project summary ↗';
-  researchCopy.append(projectButton);
+  const projectLinks = document.createElement('div');
+  projectLinks.className = 'project-actions';
+  const githubLink = document.createElement('a');
+  githubLink.className = 'project-github-link';
+  githubLink.href = 'https://github.com/mushirazaman11-art';
+  githubLink.target = '_blank';
+  githubLink.rel = 'noreferrer';
+  githubLink.textContent = 'View on GitHub ↗';
+  projectLinks.append(projectButton, githubLink);
+  researchCopy.append(projectLinks);
   const dialog = document.createElement('dialog');
   dialog.className = 'project-dialog';
   dialog.innerHTML = '<button class="dialog-close" type="button" aria-label="Close project summary">×</button><p class="dialog-kicker">PROJECT OVERVIEW</p><h2>Three Generalized Fixed Point Theorems</h2><p>This project studies how repeated mappings can lead to a stable point under suitable conditions. The work focuses on comparing hypotheses, following convergence arguments, and writing proofs with precision.</p><ul><li>Functional Analysis and Metric Spaces</li><li>Convergence and contractive-style conditions</li><li>Step-by-step proof writing</li></ul>';
