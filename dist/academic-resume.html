@@ -5,43 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mushir Uz Zaman | Resume</title>
   <style>
-    @page { size: A4; margin: 13mm; } * { box-sizing: border-box; }
-    body { margin: 0; background: #e9edf6; color: #17243f; font: 10.5pt/1.45 Arial, Helvetica, sans-serif; }
-    .page { width: min(210mm, 100%); min-height: 297mm; margin: 20px auto; padding: 16mm 17mm; background: #fff; box-shadow: 0 12px 40px rgba(19,33,59,.14); }
-    header { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 15px; border-bottom: 3px solid #364fc7; }
-    h1 { margin: 0; color: #132347; font-size: 29pt; line-height: 1.05; letter-spacing: -.7px; }
-    .role { margin: 6px 0 0; color: #5c3eb8; font-size: 12pt; font-weight: 700; }
-    .contact { margin: 0; max-width: 240px; color: #3d4a63; font-size: 9.5pt; line-height: 1.65; text-align: right; }
-    .contact a, .links a { color: inherit; text-decoration: none; }
-    section { margin-top: 16px; } h2 { margin: 0 0 8px; color: #364fc7; font-size: 9pt; letter-spacing: 1.4px; text-transform: uppercase; }
-    p { margin: 0; } .summary { color: #263754; font-size: 10.5pt; } .two-col { display: grid; grid-template-columns: 1.35fr .95fr; gap: 24px; }
-    .item { margin-bottom: 11px; } .item:last-child { margin-bottom: 0; } .topline { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-    h3 { margin: 0; color: #17243f; font-size: 11pt; } .label, .muted { color: #5d6a80; } .label { font-weight: 700; }
-    ul { margin: 5px 0 0; padding-left: 18px; } li { margin: 2px 0; }
-    .skills { display: flex; flex-wrap: wrap; gap: 5px; } .tag { border: 1px solid #cdd7f4; border-radius: 999px; background: #f4f6ff; padding: 3px 8px; color: #263c79; font-size: 9pt; }
-    .links { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; font-size: 9pt; } .links a { color: #364fc7; overflow-wrap: anywhere; }
-    .footnote { margin-top: 16px; color: #6b778c; font-size: 8.5pt; }
-    @media print { body { background: #fff; } .page { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; } }
-    @media (max-width:650px) { .page { margin: 0; padding: 28px 24px; } header, .two-col { display: block; } .contact { margin-top: 12px; text-align: left; } }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eceff4; color: #17243a; font-family: Arial, Helvetica, sans-serif; font-size: 10.1pt; line-height: 1.4; }
+    .page { width: 210mm; min-height: 297mm; margin: 18px auto; padding: 15mm 16mm; background: #fff; box-shadow: 0 12px 36px rgba(16,33,59,.15); }
+    header { border-bottom: 2px solid #173a6b; padding-bottom: 12px; }
+    h1 { margin: 0; color: #102e59; font-size: 28pt; line-height: 1.05; letter-spacing: -.45px; }
+    .headline { margin: 5px 0 0; color: #2d5e9f; font-size: 12pt; font-weight: 700; }
+    .contact { margin: 8px 0 0; color: #40516b; font-size: 9.2pt; }
+    .contact a, .profile-links a { color: #245b9e; text-decoration: none; }
+    h2 { margin: 15px 0 7px; color: #173a6b; font-size: 10pt; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid #cfd8e6; padding-bottom: 4px; }
+    h3 { margin: 0; font-size: 10.6pt; color: #142b4f; }
+    p { margin: 0; }
+    .summary { color: #293b56; }
+    .course { margin: 0 0 9px; }
+    .course strong { color: #173a6b; }
+    .course ul, .bullets { margin: 4px 0 0; padding-left: 18px; }
+    .course li, .bullets li { margin: 2px 0; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .project, .education { margin-bottom: 10px; }
+    .meta { color: #52627a; font-size: 9.2pt; }
+    .tagline { color: #3d4e67; font-style: italic; }
+    .profile-links { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; font-size: 9.2pt; }
+    .page-two { break-before: page; page-break-before: always; }
+    .footer { margin-top: 15px; color: #6a778a; font-size: 8.5pt; text-align: center; }
+    @media print { body { background: #fff; } .page { width: auto; min-height: 0; margin: 0; box-shadow: none; } }
+    @media(max-width:720px) { .page { width: 100%; min-height: 0; margin: 0; padding: 26px 22px; } .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <main class="page">
-    <header><div><h1>Mushir Uz Zaman</h1><p class="role">Mathematics &amp; Computer Science Graduate</p></div><p class="contact">Delhi, India<br><a href="mailto:mushirazaman11@gmail.com">mushirazaman11@gmail.com</a><br><a href="https://mushir-portfolio.pages.dev/">mushir-portfolio.pages.dev</a></p></header>
-    <section><h2>Profile</h2><p class="summary">M.Sc. Mathematics with Computer Science graduate with a strong foundation in mathematical reasoning, programming, and structured problem-solving. Academic study spans analysis, algebra, linear algebra, differential equations, topology, numerical methods, algorithms, databases, and operating systems. Interested in AI training and review work involving careful reasoning, code tracing, and clear technical feedback.</p></section>
-    <section class="two-col"><div>
+    <header>
+      <h1>Mushir Uz Zaman</h1>
+      <p class="headline">Mathematics with Computer Science Graduate</p>
+      <p class="contact">Delhi, India &nbsp;|&nbsp; <a href="mailto:mushirazaman11@gmail.com">mushirazaman11@gmail.com</a> &nbsp;|&nbsp; <a href="https://mushir-portfolio.pages.dev/">mushir-portfolio.pages.dev</a></p>
+    </header>
+
+    <section>
+      <p class="summary">M.Sc. Mathematics with Computer Science graduate from Jamia Millia Islamia, New Delhi, with a completed B.Sc. in Mathematics. Academic preparation combines rigorous mathematical reasoning with C and Java programming, data structures, operating systems, database management systems, and SQL. Interested in AI training and review roles that require careful multi-step analysis, code interpretation, scientific reasoning, and clear technical feedback in Hindi and professional English.</p>
+    </section>
+
+    <section>
+      <h2>Core Strengths and Coursework</h2>
+      <p class="tagline">Strongest areas, in order: 1. Mathematics &nbsp;&nbsp; 2. Coding &amp; Computer Science.</p>
+
+      <div class="course"><strong>Mathematics:</strong> Real Analysis, Abstract Algebra, Topology, Linear Algebra, Differential Equations and Applications, Functional Analysis, Complex Analysis, Differential Geometry, Differentiable Manifolds, Wavelet Analysis, and Numerical Analysis. Coursework includes measure and integration, convergence, groups and rings, vector spaces, eigenvalues, boundary-value problems, Fourier methods, and numerical approximation.</div>
+      <div class="course"><strong>Numerical &amp; Mathematical Reasoning:</strong> Root-finding, interpolation, numerical integration, Runge-Kutta methods, finite differences, stability analysis, approximation, and error estimation. Relevant foundation for checking multi-step solutions, assumptions, and numerical accuracy.</div>
+      <div class="course"><strong>Coding:</strong> C programming fundamentals including control flow, arrays, strings, pointers, functions, recursion, structures, and file handling. Java coursework includes object-oriented programming, classes, inheritance, polymorphism, interfaces, collections, and exception handling.</div>
+      <div class="course"><strong>Computer Science:</strong> Data structures and algorithms in C/Java: arrays, linked lists, stacks, queues, trees, graphs, searching, sorting, BFS/DFS, and time/space complexity. Operating Systems: processes, scheduling, synchronization, deadlocks, memory management, and file systems. DBMS: relational models, ER diagrams, normalization, transactions, and SQL.</div>
+      <div class="course"><strong>Physics:</strong> Undergraduate study in mechanics, motion, waves, optics, electricity and magnetism, measurement, and mathematical modelling of physical systems. Supports quantitative and scientific reasoning.</div>
+      <div class="course"><strong>Chemistry:</strong> Undergraduate study in physical, organic, and inorganic chemistry, with scientific observation, quantitative reasoning, and laboratory-based concepts.</div>
+      <div class="course"><strong>Communication:</strong> Hindi (native) and professional English for reading, writing, explanation, and structured technical communication.</div>
+    </section>
+
+    <p class="footer">Mushir Uz Zaman &nbsp;|&nbsp; Resume &nbsp;|&nbsp; Page 1 of 2</p>
+  </main>
+
+  <main class="page page-two">
+    <header>
+      <h1>Mushir Uz Zaman</h1>
+      <p class="headline">Mathematics with Computer Science Graduate</p>
+      <p class="contact"><a href="mailto:mushirazaman11@gmail.com">mushirazaman11@gmail.com</a> &nbsp;|&nbsp; <a href="https://mushir-portfolio.pages.dev/">mushir-portfolio.pages.dev</a></p>
+    </header>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Study of Three Generalized Fixed Point Theorems</h3>
+        <p class="meta">Academic Mathematics Project</p>
+        <ul class="bullets"><li>Studied three generalized fixed point theorems with focus on mappings, metric spaces, convergence conditions, and proof-based reasoning.</li><li>Developed structured understanding of functional analysis concepts and the conditions leading an iterative sequence toward a stable solution.</li></ul>
+      </div>
+      <div class="project">
+        <h3>Personal Academic Portfolio</h3>
+        <p class="meta">Portfolio: mushir-portfolio.pages.dev</p>
+        <ul class="bullets"><li>Built and published a responsive personal portfolio covering academic background, coursework, project work, online certificates, coding practice, and professional profiles.</li><li>Designed for phone, tablet, and laptop use with interactive academic-topic and practice sections.</li></ul>
+      </div>
+    </section>
+
+    <section>
       <h2>Education</h2>
-      <div class="item"><div class="topline"><h3>M.Sc. Mathematics with Computer Science</h3><span class="label">Completed</span></div><p>Jamia Millia Islamia, New Delhi</p><p class="muted">Key study: Real Analysis, Algebra, Linear Algebra, Differential Equations, Topology, Numerical Analysis, Data Structures, DBMS, and Operating Systems.</p></div>
-      <div class="item"><div class="topline"><h3>B.Sc. in Mathematics</h3><span class="label">Completed</span></div><p>Vinoba Bhave University, Jharkhand</p><p class="muted">Mathematics as the main subject, with Physics and Chemistry electives.</p></div>
-      <h2>Academic Project</h2><div class="item"><h3>Study of Three Generalized Fixed Point Theorems</h3><p class="muted">Focused on functional analysis, metric spaces, convergence, mappings, and structured proof-based reasoning.</p></div>
-      <h2>Courses &amp; Practice</h2><ul><li><strong>Kaggle:</strong> Python and Intro to Machine Learning course certificates.</li><li><strong>HackerRank:</strong> Python and SQL programming practice.</li><li><strong>LeetCode:</strong> Algorithmic problem-solving practice.</li></ul>
-    </div><div>
-      <h2>Technical Skills</h2><div class="skills"><span class="tag">Mathematics</span><span class="tag">Real Analysis</span><span class="tag">Linear Algebra</span><span class="tag">Abstract Algebra</span><span class="tag">Differential Equations</span><span class="tag">Numerical Methods</span><span class="tag">C</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Machine Learning</span></div>
-      <section><h2>Strengths</h2><ul><li>Step-by-step mathematical reasoning and verification</li><li>Code tracing, logic checking, and technical problem-solving</li><li>Clear academic and technical communication</li></ul></section>
-      <section><h2>Languages</h2><p>Hindi (native) &middot; English (professional)</p></section>
-      <section><h2>Online Profiles</h2><div class="links"><a href="https://github.com/mushirazaman11-art">GitHub</a><a href="https://www.linkedin.com/in/mushir-uz-zaman-90a34b422/">LinkedIn</a><a href="https://www.kaggle.com/mushiruzzaman">Kaggle</a><a href="https://www.hackerrank.com/profile/mushirazaman11">HackerRank</a><a href="https://leetcode.com/u/Mushir_Uz_Zaman/">LeetCode</a></div></section>
-    </div></section>
-    <p class="footnote">Portfolio: mushir-portfolio.pages.dev</p>
+      <div class="education"><h3>M.Sc. Mathematics with Computer Science</h3><p>Jamia Millia Islamia, New Delhi &nbsp;|&nbsp; Completed</p><p class="meta">Academic focus: advanced mathematics, numerical analysis, C/Java programming, data structures, operating systems, web designing, and database management systems.</p></div>
+      <div class="education"><h3>B.Sc. in Mathematics</h3><p>Vinoba Bhave University, Jharkhand &nbsp;|&nbsp; Completed</p><p class="meta">Mathematics as the main subject, with Physics and Chemistry electives; foundation in quantitative problem-solving and scientific study.</p></div>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h2>Online Courses and Certificates</h2>
+        <div class="education"><h3>Python | Kaggle Learn</h3><p class="meta">Course certificate completed. Topics include functions, conditionals, loops, lists, strings, dictionaries, and libraries.</p></div>
+        <div class="education"><h3>Intro to Machine Learning | Kaggle Learn</h3><p class="meta">Course certificate completed. Topics include model building, validation, underfitting/overfitting, and random forests.</p></div>
+        <div class="education"><h3>Python and SQL Practice | HackerRank</h3><p class="meta">Programming and SQL problem-solving practice through public HackerRank profile.</p></div>
+        <div class="education"><h3>Algorithmic Problem Solving | LeetCode</h3><p class="meta">Practice solving coding questions and algorithmic problems.</p></div>
+      </div>
+      <div>
+        <h2>Technical Skills</h2>
+        <p>Mathematics &middot; C &middot; Java &middot; Python &middot; SQL &middot; Data Structures &middot; Algorithms &middot; DBMS &middot; Operating Systems &middot; HTML &middot; CSS &middot; JavaScript &middot; Machine Learning</p>
+        <h2>Languages</h2><p>Hindi &mdash; Native &nbsp;|&nbsp; English &mdash; Professional proficiency</p>
+        <h2>Online Profiles</h2>
+        <div class="profile-links"><a href="https://github.com/mushirazaman11-art">GitHub</a><a href="https://www.linkedin.com/in/mushir-uz-zaman-90a34b422/">LinkedIn</a><a href="https://www.kaggle.com/mushiruzzaman">Kaggle</a><a href="https://www.hackerrank.com/profile/mushirazaman11">HackerRank</a><a href="https://leetcode.com/u/Mushir_Uz_Zaman/">LeetCode</a></div>
+      </div>
+    </section>
+
+    <p class="footer">Mushir Uz Zaman &nbsp;|&nbsp; Resume &nbsp;|&nbsp; Page 2 of 2</p>
   </main>
 </body>
 </html>
