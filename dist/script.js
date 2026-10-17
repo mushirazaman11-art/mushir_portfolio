@@ -155,11 +155,7 @@ if (contactLink) {
   copyButton.className = 'copy-email';
   copyButton.type = 'button';
   copyButton.textContent = 'Copy email address';
-  const whatsappButton = document.createElement('button');
-  whatsappButton.className = 'whatsapp-contact';
-  whatsappButton.type = 'button';
-  whatsappButton.textContent = 'Message on WhatsApp ↗';
-  contactLink.after(copyButton, whatsappButton);
+  contactLink.after(copyButton);
   copyButton.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText('mushirazaman11@gmail.com');
@@ -180,6 +176,29 @@ document.querySelectorAll('.whatsapp-contact').forEach(button => {
     window.open(`https://wa.me/${countryCode}${contactNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   });
 });
+
+// Contact keeps its email destination on hover; a click reveals both contact choices.
+const contactTrigger = document.querySelector('.nav-contact-trigger');
+const contactMenu = document.querySelector('.nav-contact-menu');
+if (contactTrigger && contactMenu) {
+  contactTrigger.addEventListener('click', event => {
+    event.preventDefault();
+    const isOpen = contactMenu.classList.toggle('is-open');
+    contactTrigger.setAttribute('aria-expanded', String(isOpen));
+  });
+  document.addEventListener('click', event => {
+    if (!contactMenu.contains(event.target)) {
+      contactMenu.classList.remove('is-open');
+      contactTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      contactMenu.classList.remove('is-open');
+      contactTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 // A subtle reading-progress indicator and current page update label.
 const progress = document.createElement('div');
