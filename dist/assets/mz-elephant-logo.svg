@@ -1,11 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">MZ elephant mark</title>
-  <desc id="desc">An MZ monogram with a small elephant inspired by the forests of Jharkhand.</desc>
-  <defs><linearGradient id="bg" x1="12" y1="8" x2="84" y2="91" gradientUnits="userSpaceOnUse"><stop stop-color="#68e6d7"/><stop offset=".52" stop-color="#9d8cff"/><stop offset="1" stop-color="#f5c766"/></linearGradient></defs>
-  <circle cx="48" cy="48" r="45" fill="#111d43" stroke="url(#bg)" stroke-width="3"/>
-  <path d="M18 66V31l11 18 10-18v35M47 31h28L50 66h27" fill="none" stroke="#f6f7ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
-  <path d="M68 58c8 0 13 5 13 12 0 4-2 8-6 10v6c0 3-4 3-4 0v-6h-5v6c0 3-4 3-4 0v-8c-4-3-6-7-6-12 0-5 5-8 12-8Z" fill="#54d6d2"/>
-  <circle cx="72" cy="64" r="1.6" fill="#111d43"/>
-  <path d="M79 69c4 0 5 2 4 5" fill="none" stroke="#111d43" stroke-linecap="round" stroke-width="1.6"/>
-  <path d="M63 61c-4-5-10-3-10 2 0 3 2 6 6 7" fill="#54d6d2" stroke="#111d43" stroke-linejoin="round" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">MZ Jharkhand forest elephant logo</title>
+  <desc id="desc">MZ letters above a clearly visible elephant walking through a forest.</desc>
+  <defs>
+    <linearGradient id="sky" x1="18" y1="8" x2="110" y2="119" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#283c77"/><stop offset=".6" stop-color="#162653"/><stop offset="1" stop-color="#10203c"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="22" y1="98" x2="106" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#49bfae"/><stop offset="1" stop-color="#8b75dd"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="61" fill="url(#sky)" stroke="#f5c766" stroke-width="3"/>
+  <path d="M14 103c15-9 27-10 42-6 22 6 39 1 58-7v25H14Z" fill="url(#ground)"/>
+  <g fill="#65d7c9" opacity=".82">
+    <path d="M20 89V57l-10 19h7l-9 12h24l-9-12h7L20 57v32Z"/>
+    <path d="M103 88V48L91 69h8L88 82h30l-11-13h8l-12-21v40Z"/>
+  </g>
+  <path d="M79 78c12 0 21 8 21 19v10H88v-9H75v9H64v-9H53v9H42V94c0-9 8-16 18-16h5c1-10 7-17 16-17 9 0 15 7 15 16 0 5-3 10-8 12h-8c-5-2-8-6-8-11 0-5 3-8 7-8 3 0 5 2 6 4-1-8-6-12-13-12-7 0-12 6-12 16h20Z" fill="#edf6f7" stroke="#10203c" stroke-linejoin="round" stroke-width="2.2"/>
+  <circle cx="86" cy="81" r="2.2" fill="#10203c"/>
+  <path d="M95 88c6 0 9 4 8 9" fill="none" stroke="#10203c" stroke-linecap="round" stroke-width="2"/>
+  <path d="M74 76c-7-8-17-4-17 4 0 7 6 12 15 11" fill="#b9f0e9" stroke="#10203c" stroke-linejoin="round" stroke-width="2"/>
+  <path d="M76 91l5 5 5-5" fill="none" stroke="#f5c766" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"/>
+  <text x="64" y="43" fill="#f6f8ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" letter-spacing="2" text-anchor="middle">MZ</text>
+  <path d="M38 49h52" stroke="#f5c766" stroke-linecap="round" stroke-width="2"/>
 </svg>
