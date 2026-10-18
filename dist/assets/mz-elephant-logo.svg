@@ -1,25 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
-  <title id="title">MZ Jharkhand forest elephant logo</title>
-  <desc id="desc">MZ letters above a clearly visible elephant walking through a forest.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">MZ forest elephant monogram</title>
+  <desc id="desc">An interlocked MZ monogram above an elephant silhouette among forest trees and rocks.</desc>
   <defs>
-    <linearGradient id="sky" x1="18" y1="8" x2="110" y2="119" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#283c77"/><stop offset=".6" stop-color="#162653"/><stop offset="1" stop-color="#10203c"/>
+    <linearGradient id="night" x1="24" y1="12" x2="136" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263c76"/><stop offset=".58" stop-color="#17244d"/><stop offset="1" stop-color="#0c1634"/>
     </linearGradient>
-    <linearGradient id="ground" x1="22" y1="98" x2="106" y2="116" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#49bfae"/><stop offset="1" stop-color="#8b75dd"/>
+    <linearGradient id="metal" x1="49" y1="43" x2="112" y2="103" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff1b4"/><stop offset=".46" stop-color="#f5c766"/><stop offset="1" stop-color="#b77cd9"/>
     </linearGradient>
+    <clipPath id="round"><circle cx="80" cy="80" r="74"/></clipPath>
   </defs>
-  <circle cx="64" cy="64" r="61" fill="url(#sky)" stroke="#f5c766" stroke-width="3"/>
-  <path d="M14 103c15-9 27-10 42-6 22 6 39 1 58-7v25H14Z" fill="url(#ground)"/>
-  <g fill="#65d7c9" opacity=".82">
-    <path d="M20 89V57l-10 19h7l-9 12h24l-9-12h7L20 57v32Z"/>
-    <path d="M103 88V48L91 69h8L88 82h30l-11-13h8l-12-21v40Z"/>
+  <circle cx="80" cy="80" r="77" fill="#0b1530"/>
+  <circle cx="80" cy="80" r="74" fill="url(#night)" stroke="#f5c766" stroke-width="2"/>
+  <g clip-path="url(#round)">
+    <path d="M3 125c23-14 39-17 58-9 18 8 37 8 57-1 16-7 28-7 39-2v47H3Z" fill="#10294a"/>
+    <g fill="#214b59" opacity=".95">
+      <path d="M16 117V62L0 89h10L-2 108h36L15 89h10L16 62v55Z"/>
+      <path d="M37 119V77L25 97h8l-11 16h29L40 97h8L37 77v42Z"/>
+      <path d="M145 118V58l-17 30h10l-13 20h40l-13-20h10l-17-30v60Z"/>
+      <path d="M123 119V75l-13 23h8l-11 17h32l-11-17h8l-13-23v44Z"/>
+    </g>
+    <g fill="#0b1a36" opacity=".9">
+      <path d="M0 133c18-7 32-7 48 1 14 7 29 6 45-1 25-11 44-8 67 2v28H0Z"/>
+      <path d="M10 137l12-11 13 11M118 139l14-12 15 12" fill="none" stroke="#416878" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(0 4)">
+      <path d="M63 109c-2-19 10-32 29-32 14 0 27 10 29 24 7 1 12 6 12 13v10h-10v11h-11v-10H91v10H80v-10H60v10H49v-18c0-5 3-8 7-10 2-18 15-30 31-30 15 0 27 10 30 25-5-7-12-11-21-11-14 0-24 9-25 24h-8Z" fill="#dbe7ed"/>
+      <path d="M108 100c9-5 18-3 22 4 3 6 0 13-7 16l-7-11Z" fill="#9bc7cc"/>
+      <path d="M116 97c-7-9-20-7-25 3-3 7 0 15 8 19" fill="none" stroke="#dbe7ed" stroke-linecap="round" stroke-width="7"/>
+      <path d="M119 117c7 0 11 4 10 10" fill="none" stroke="#dbe7ed" stroke-linecap="round" stroke-width="6"/>
+      <circle cx="116" cy="104" r="2.3" fill="#0c1634"/>
+      <path d="M101 119l5 5 5-5" fill="none" stroke="#f5c766" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
   </g>
-  <path d="M79 78c12 0 21 8 21 19v10H88v-9H75v9H64v-9H53v9H42V94c0-9 8-16 18-16h5c1-10 7-17 16-17 9 0 15 7 15 16 0 5-3 10-8 12h-8c-5-2-8-6-8-11 0-5 3-8 7-8 3 0 5 2 6 4-1-8-6-12-13-12-7 0-12 6-12 16h20Z" fill="#edf6f7" stroke="#10203c" stroke-linejoin="round" stroke-width="2.2"/>
-  <circle cx="86" cy="81" r="2.2" fill="#10203c"/>
-  <path d="M95 88c6 0 9 4 8 9" fill="none" stroke="#10203c" stroke-linecap="round" stroke-width="2"/>
-  <path d="M74 76c-7-8-17-4-17 4 0 7 6 12 15 11" fill="#b9f0e9" stroke="#10203c" stroke-linejoin="round" stroke-width="2"/>
-  <path d="M76 91l5 5 5-5" fill="none" stroke="#f5c766" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"/>
-  <text x="64" y="43" fill="#f6f8ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" letter-spacing="2" text-anchor="middle">MZ</text>
-  <path d="M38 49h52" stroke="#f5c766" stroke-linecap="round" stroke-width="2"/>
+  <g fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M37 65V37l15 19 15-19v28" stroke-width="8"/>
+    <path d="M78 39h38L83 69h35" stroke-width="8"/>
+  </g>
+  <path d="M32 75h96" stroke="#66dfd0" stroke-linecap="round" stroke-width="1.5" opacity=".85"/>
+  <circle cx="80" cy="80" r="74" fill="none" stroke="url(#metal)" stroke-width="2"/>
 </svg>
