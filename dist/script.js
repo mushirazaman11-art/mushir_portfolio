@@ -218,3 +218,15 @@ if (footer) {
   updated.textContent = 'UPDATED · OCTOBER 2026';
   footer.append(updated);
 }
+
+// X profile card.
+const profilesGrid = document.querySelector('.profiles-grid');
+if (profilesGrid) {
+  const xProfile = document.createElement('a');
+  xProfile.className = 'profile-card';
+  xProfile.href = 'https://x.com/mushirjmi26';
+  xProfile.target = '_blank';
+  xProfile.rel = 'noreferrer';
+  xProfile.innerHTML = '<span>06</span><h3>X</h3><p>Academic updates, coding practice &amp; learning</p><b>View profile &rarr;</b>';
+  profilesGrid.append(xProfile);
+}
