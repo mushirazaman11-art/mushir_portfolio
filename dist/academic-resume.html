@@ -10,10 +10,12 @@
     body { margin: 0; color: #15233b; background: #edf1f7; font: 9pt/1.27 Arial, Helvetica, sans-serif; }
     .page { width: 210mm; min-height: 297mm; margin: 14px auto; padding: 13mm 15mm 10mm; background: white; box-shadow: 0 10px 28px rgba(18, 35, 62, .14); }
     .page + .page { break-before: page; page-break-before: always; }
-    header { border-bottom: 2px solid #183d6a; padding-bottom: 9px; }
+    header { border-bottom: 2px solid #183d6a; padding-bottom: 9px; text-align: center; }
     h1 { margin: 0; color: #102f5d; font-size: 26pt; letter-spacing: -.55px; line-height: 1; }
     .role { margin: 4px 0 7px; color: #3569aa; font-size: 11.4pt; font-weight: 700; }
-    .contact { display: flex; flex-wrap: wrap; gap: 4px 11px; color: #41536c; font-size: 8.2pt; }
+    .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; color: #41536c; font-size: 8.2pt; }
+    .contact > span:first-child { flex-basis: 100%; }
+    .contact > span:last-child { display: none; }
     .contact a { position: relative; color: inherit; text-decoration: none; }
     .contact > span:not(:first-child):not(:last-child) a:before { content: ""; position: absolute; z-index: 2; left: -17px; right: -2px; top: -3px; bottom: -3px; }
     .contact b { display: inline-grid; width: 13px; height: 13px; margin-right: 4px; place-items: center; border-radius: 50%; color: #fff; background: #183d6a; font: 700 7px/1 Arial, sans-serif; vertical-align: -2px; }
@@ -40,6 +42,8 @@
     .contact > span:nth-child(6) b { background-image: url("assets/resume-profile-icons/hackerrank.svg"); }
     .contact > span:nth-child(7) b { background-image: url("assets/resume-profile-icons/leetcode.svg"); }
     .contact > span:nth-child(2) b:after, .contact > span:nth-child(3) b:after, .contact > span:nth-child(4) b:after, .contact > span:nth-child(5) b:after, .contact > span:nth-child(6) b:after, .contact > span:nth-child(7) b:after { display: none; }
+    .contact > span:nth-child(2) a, .contact > span:nth-child(3) a, .contact > span:nth-child(4) a, .contact > span:nth-child(5) a, .contact > span:nth-child(6) a, .contact > span:nth-child(7) a { font-size: 0; }
+    .contact > span:nth-child(2) b, .contact > span:nth-child(3) b, .contact > span:nth-child(4) b, .contact > span:nth-child(5) b, .contact > span:nth-child(6) b, .contact > span:nth-child(7) b { width: 16px; height: 16px; margin-right: 0; }
     h2 { margin: 9px 0 4px; padding-bottom: 3px; border-bottom: 1px solid #cbd7e7; color: #173d6c; font-size: 9.8pt; letter-spacing: .9px; text-transform: uppercase; }
     h3 { margin: 0; color: #142f55; font-size: 10pt; }
     h3 a { color: inherit; text-decoration: none; }
