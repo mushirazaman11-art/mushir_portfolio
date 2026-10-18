@@ -229,4 +229,29 @@ if (profilesGrid) {
   xProfile.rel = 'noreferrer';
   xProfile.innerHTML = '<span>06</span><h3>X</h3><p>Academic updates, coding practice &amp; learning</p><b>View profile &rarr;</b>';
   profilesGrid.append(xProfile);
+  const profileOrder = ['LinkedIn', 'GitHub', 'Kaggle', 'HackerRank', 'LeetCode', 'X'];
+  profileOrder.forEach(name => {
+    const card = Array.from(profilesGrid.children).find(item => item.querySelector('h3')?.textContent.trim() === name);
+    if (card) profilesGrid.append(card);
+  });
+}
+
+// Keep the front-page profile row in the same professional-priority order.
+const heroProfiles = document.querySelector('.hero-profiles');
+if (heroProfiles) {
+  const xLink = document.createElement('a');
+  xLink.href = 'https://x.com/mushirjmi26';
+  xLink.target = '_blank';
+  xLink.rel = 'noreferrer';
+  xLink.textContent = 'X ';
+  const arrow = document.createElement('span');
+  arrow.setAttribute('aria-hidden', 'true');
+  arrow.textContent = '↗';
+  xLink.append(arrow);
+  heroProfiles.append(xLink);
+  const heroOrder = ['LinkedIn', 'GitHub', 'Kaggle', 'HackerRank', 'LeetCode', 'X'];
+  heroOrder.forEach(name => {
+    const link = Array.from(heroProfiles.children).find(item => item.textContent.trim().startsWith(name));
+    if (link) heroProfiles.append(link);
+  });
 }
