@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mushir-portfolio.pages.dev/sitemap.xml
